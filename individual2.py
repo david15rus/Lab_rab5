@@ -39,3 +39,21 @@ if __name__ == '__main__':
             s += abs(A[i])
 
         print('Сумма модулей: ', s)
+
+    # Выполнение 3 части задания
+    a = int(input("Введите число а "))
+    b = int(input("Введите число b, больше числа a "))
+    i = 0
+    n = len(A)
+    N = n
+
+    while i < n:
+        if a <= A[i] <= b:
+            del A[i]
+            n -= 1
+
+        else:
+            i += 1
+    for i in range(n, N):
+        A.append(0)
+    print(A)
